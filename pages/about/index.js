@@ -32,7 +32,11 @@ const aboutData = [
             },
             {
                 title: "UI/UX Design",
-                icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+                icons: [
+                    <FaFigma key={"index8"} />,
+                    <SiAdobexd key={"index9"} />,
+                    <SiAdobephotoshop key={"index10"} />,
+                ],
             },
         ],
     },
