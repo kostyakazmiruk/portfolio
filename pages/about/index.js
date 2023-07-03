@@ -21,13 +21,13 @@ const aboutData = [
             {
                 title: "Web Development",
                 icons: [
-                    <FaHtml5 />,
-                    <FaCss3 />,
-                    <FaJs />,
-                    <FaReact />,
-                    <SiNextdotjs />,
-                    <SiFramer />,
-                    <FaWordpress />,
+                    <FaHtml5 key={"index1"} />,
+                    <FaCss3 key={"index2"} />,
+                    <FaJs key={"index3"} />,
+                    <FaReact key={"index4"} />,
+                    <SiNextdotjs key={"index5"} />,
+                    <SiFramer key={"index6"} />,
+                    <FaWordpress key={"index7"} />,
                 ],
             },
             {
