@@ -15,6 +15,9 @@ import {
 } from "react-icons/si"
 import { useState } from "react"
 import Circles from "../../components/Circles"
+import Avatar from "../../components/Avatar"
+import { motion } from "framer-motion"
+import { fadeIn } from "../../variants"
 
 const aboutData = [
     {
@@ -92,10 +95,67 @@ const aboutData = [
 ]
 
 const About = () => {
-    const [index, setIndex] = useState()
+    const [index, setIndex] = useState(0)
+    console.log(index)
     return (
-        <div>
+        <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
             <Circles />
+            {/*    avatar*/}
+            <motion.div
+                variants={fadeIn("right", 0.2)}
+                initial="hidden"
+                animate="show"
+                exit="hidden"
+                className="absolute -left-[370px] bottom-0 hidden xl:flex"
+            >
+                <Avatar />
+            </motion.div>
+            <div className="container mx-auto flex h-full flex-col items-center gap-x-6 xl:flex-row">
+                <div className="flex flex-1 flex-col justify-center">text</div>
+                <div className="flex h-[480px] w-full flex-col xl:max-w-[48%]">
+                    <div className="mx-auto mb-4 flex gap-x-4 xl:mx-0 xl:gap-x-8">
+                        {aboutData.map((item, itemIndex) => {
+                            return (
+                                <div
+                                    key={itemIndex}
+                                    className={`${
+                                        itemIndex === index && "text-accent "
+                                    } relative cursor-pointer capitalize xl:text-lg
+                                    `}
+                                    onClick={() => setIndex(itemIndex)}
+                                >
+                                    {item.title}
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <div className="flex flex-col items-center gap-y-2 py-2 xl:items-start xl:gap-y-4 xl:py-6">
+                        {aboutData[index].info.map((item, itemIndex) => {
+                            return (
+                                <div
+                                    key={itemIndex}
+                                    className="flex max-w-max flex-1 flex-col items-center gap-x-2 text-white/60 md:flex-row"
+                                >
+                                    {/*    title*/}
+                                    <div>{item.title}</div>
+                                    <div className="hidden md:flex">-</div>
+                                    <div>{item.stage}</div>
+                                    {/*    icons*/}
+                                    <div className="flex gap-x-4">
+                                        {item.icons?.map((icon, iconIndex) => {
+                                            return (
+                                                <div className="text-2xl">
+                                                    {icon}
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
