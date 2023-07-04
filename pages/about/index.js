@@ -13,6 +13,8 @@ import {
     SiFramer,
     SiNextdotjs,
 } from "react-icons/si"
+import { useState } from "react"
+import Circles from "../../components/Circles"
 
 const aboutData = [
     {
@@ -90,7 +92,12 @@ const aboutData = [
 ]
 
 const About = () => {
-    return <div>About</div>
+    const [index, setIndex] = useState()
+    return (
+        <div>
+            <Circles />
+        </div>
+    )
 }
 
 export default About
