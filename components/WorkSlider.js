@@ -1,4 +1,3 @@
-// data
 import { Swiper, SwiperSlide } from "swiper/react"
 import { FreeMode, Pagination } from "swiper"
 import { BsArrowRight } from "react-icons/bs"
