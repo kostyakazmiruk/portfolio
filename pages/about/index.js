@@ -1,7 +1,9 @@
 //  data
 import {
     FaCss3,
+    FaDocker,
     FaFigma,
+    FaGithub,
     FaHtml5,
     FaJs,
     FaReact,
@@ -12,6 +14,7 @@ import {
     SiAdobexd,
     SiFramer,
     SiNextdotjs,
+    SiPostgresql,
 } from "react-icons/si"
 import { useState } from "react"
 import Circles from "../../components/Circles"
@@ -32,47 +35,55 @@ const aboutData = [
                     <FaJs key={"index3"} />,
                     <FaReact key={"index4"} />,
                     <SiNextdotjs key={"index5"} />,
-                    <SiFramer key={"index6"} />,
-                    <FaWordpress key={"index7"} />,
+                    <FaGithub key={"index6"} />,
+                    <SiPostgresql key={"index7"} />,
+                    <FaDocker key={"index8"} />,
+                    <FaGithub key={"index9"} />,
+                    // <SiFramer key={"index6"} />,
+                    // <FaWordpress key={"index7"} />,
                 ],
             },
             {
                 title: "UI/UX Design",
                 icons: [
                     <FaFigma key={"index8"} />,
-                    <SiAdobexd key={"index9"} />,
+                    // <SiAdobexd key={"index9"} />,
                     <SiAdobephotoshop key={"index10"} />,
                 ],
             },
         ],
     },
-    {
-        title: "awards",
-        info: [
-            {
-                title: "Webby Awards - Honoree",
-                stage: "2011 - 2012",
-            },
-            {
-                title: "Adobe Design Achievement Awards - Finalist",
-                stage: "2009 - 2010",
-            },
-        ],
-    },
+    // {
+    //     title: "awards",
+    //     info: [
+    //         {
+    //             title: "Webby Awards - Honoree",
+    //             stage: "2011 - 2012",
+    //         },
+    //         {
+    //             title: "Adobe Design Achievement Awards - Finalist",
+    //             stage: "2009 - 2010",
+    //         },
+    //     ],
+    // },
     {
         title: "experience",
         info: [
             {
-                title: "UX/UI Designer - XYZ Company",
-                stage: "2012 - 2023",
+                title: "Fullstack Developer - Wenda Srl",
+                stage: "Mar 2022 - present",
             },
             {
-                title: "Web Developer - ABC Agency",
-                stage: "2010 - 2012",
+                title: "ReactJS Developer - MusicAsCode",
+                stage: "Nov 2021 - Jan 2022",
             },
             {
-                title: "Intern - DEF Corporation",
-                stage: "2008 - 2010",
+                title: "HTML/CSS/JS Developer - Code for Croatia",
+                stage: "May 2021 - Sep 2021",
+            },
+            {
+                title: "FrontEnd Developer - Windy & Go",
+                stage: "Jan 2021 - Mar 2021",
             },
         ],
     },
