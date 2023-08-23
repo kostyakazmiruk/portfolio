@@ -26,11 +26,10 @@ const Home = () => {
                         initial="hidden"
                         animate="show"
                         exit="hidden"
-                        className="mx-auto mb-10 max-w-sm xl:mx-0 xl:mb-16 xl:max-w-xl"
+                        className="mx-auto mb-10 max-w-sm uppercase xl:mx-0 xl:mb-16 xl:max-w-xl"
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Aliquid culpa ex illo labore non pariatur
-                        praesentium quia quis sed veritatis!
+                        Forging Digital Views Where Imagination Blends with
+                        Code's Canvas
                     </motion.p>
                     {/*    btn*/}
                     <div className="relative flex justify-center xl:hidden">
