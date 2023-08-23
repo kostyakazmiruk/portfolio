@@ -7,7 +7,7 @@ const Bulb = () => {
                 src={"/bulb.png"}
                 width={260}
                 height={200}
-                className="h-full w-full"
+                className="pointer-events-none h-full w-full select-none"
                 alt="bulb"
             />
         </div>

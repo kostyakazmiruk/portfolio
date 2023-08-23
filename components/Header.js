@@ -11,6 +11,7 @@ const Header = () => {
                     <Link href={"/"}>
                         <Image
                             src={"/logo.svg"}
+                            className="select-none"
                             width={220}
                             height={48}
                             priority={true}

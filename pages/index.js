@@ -40,7 +40,7 @@ const Home = () => {
                         initial="hidden"
                         animate="show"
                         exit="hidden"
-                        className="hidden xl:flex"
+                        className="hidden select-none xl:flex"
                     >
                         <ProjectsBtn />
                     </motion.div>
