@@ -15,6 +15,7 @@ import {
     SiFramer,
     SiNextdotjs,
     SiPostgresql,
+    SiTypescript,
 } from "react-icons/si"
 import { useState } from "react"
 import Circles from "../../components/Circles"
@@ -33,6 +34,7 @@ const aboutData = [
                     <FaHtml5 key={"index1"} />,
                     <FaCss3 key={"index2"} />,
                     <FaJs key={"index3"} />,
+                    <SiTypescript key={"index10"} />,
                     <FaReact key={"index4"} />,
                     <SiNextdotjs key={"index5"} />,
                     <FaGithub key={"index6"} />,
@@ -87,23 +89,23 @@ const aboutData = [
             },
         ],
     },
-    {
-        title: "credentials",
-        info: [
-            {
-                title: "Web Development - ABC University, LA, CA",
-                stage: "2011",
-            },
-            {
-                title: "Computer Science Diploma - AV Technical Institute",
-                stage: "2009",
-            },
-            {
-                title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-                stage: "2006",
-            },
-        ],
-    },
+    // {
+    //     title: "credentials",
+    //     info: [
+    //         {
+    //             title: "Web Development - ABC University, LA, CA",
+    //             stage: "2011",
+    //         },
+    //         {
+    //             title: "Computer Science Diploma - AV Technical Institute",
+    //             stage: "2009",
+    //         },
+    //         {
+    //             title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
+    //             stage: "2006",
+    //         },
+    //     ],
+    // },
 ]
 
 const About = () => {
