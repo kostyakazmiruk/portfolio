@@ -16,29 +16,29 @@ import { FreeMode, Pagination } from "swiper"
 
 const serviceData = [
     {
+        icon: <RxDesktop />,
+        title: "Development",
+        description: "FrontEnd, BackEnd - I can do both!!",
+    },
+    {
         icon: <RxCrop />,
         title: "Branding",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        description: "I am dedicated to crafting your brand.",
     },
     {
         icon: <RxPencil2 />,
         title: "Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        description: "Elevating Frontend with a Design Edge.",
     },
-    {
-        icon: <RxDesktop />,
-        title: "Development",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-        icon: <RxReader />,
-        title: "Copywriting",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
+    // {
+    //     icon: <RxReader />,
+    //     title: "Copywriting",
+    //     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    // },
     {
         icon: <RxRocket />,
         title: "SEO",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        description: "Crafting Code with SEO Excellence.",
     },
 ]
 
@@ -63,7 +63,7 @@ const ServiceSlider = () => {
             {serviceData.map((item, index) => {
                 return (
                     <SwiperSlide key={index}>
-                        <div className="group flex h-max cursor-pointer gap-x-6 rounded-lg bg-[rgba(65,47,123,0.15)] px-6 py-8 transition-all duration-300 hover:bg-[rgba(89,64,169,0.15)] sm:flex-col sm:gap-x-0">
+                        <div className="group flex h-max min-h-[286px] cursor-pointer select-none justify-between gap-x-6 rounded-lg bg-[rgba(65,47,123,0.15)] px-6 py-8 transition-all duration-300 hover:bg-[rgba(89,64,169,0.15)] sm:flex-col sm:gap-x-0">
                             {/*    icon*/}
                             <div className="mb-4 text-4xl text-accent">
                                 {item.icon}

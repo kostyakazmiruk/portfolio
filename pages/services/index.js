@@ -28,9 +28,11 @@ const Services = () => {
                             exit="hidden"
                             className="maxw-[400px] mx-auto mb-4 lg:mx-0"
                         >
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Dolorum, quos, voluptatum. Ducimus est ipsam
-                            neque quas sit voluptate. Autem, sit!
+                            In a world driven by technology, the choice of a
+                            development partner can define the trajectory of
+                            your digital journey. It's not just about code; it's
+                            about the expertise, dedication, and innovation that
+                            come together to craft exceptional solutions.
                         </motion.p>
                     </div>
                     {/*    slider*/}
