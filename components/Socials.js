@@ -6,7 +6,7 @@ import {
     RiPinterestLine,
     RiYoutubeLine,
 } from "react-icons/ri"
-import { BsLinkedin, BsTelegram } from "react-icons/bs"
+import { BsGithub, BsLinkedin, BsTelegram } from "react-icons/bs"
 
 const Socials = () => {
     return (
@@ -34,6 +34,12 @@ const Socials = () => {
                 className="transition-all duration-300 hover:text-accent"
             >
                 <BsTelegram />
+            </Link>
+            <Link
+                href={"https://github.com/kostyakazmiruk"}
+                className="transition-all duration-300 hover:text-accent"
+            >
+                <BsGithub />
             </Link>
             <Link
                 href={"https://www.linkedin.com/in/kostya-kazmiruk-7301a11b6/"}
