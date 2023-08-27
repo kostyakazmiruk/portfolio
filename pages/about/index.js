@@ -161,8 +161,7 @@ const About = () => {
                             {/*experience*/}
                             <div className="relative flex-1 after:absolute after:right-0 after:top-0 after:h-full after:w-[1px] after:bg-white/10">
                                 <div className="mb-2 text-2xl font-extrabold text-accent xl:text-4xl">
-                                    <CountUp start={0} end={10} duration={5} />{" "}
-                                    +
+                                    <CountUp start={0} end={2} duration={5} /> +
                                 </div>
                                 {/*:TODO: Check out why years of experince overlap, and find why icon of avatar doesnt show as in turorial*/}
                                 <div className="text-nowrap max-w-[100px] text-xs uppercase leading-[1.4px] tracking-[1px]">
