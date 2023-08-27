@@ -1,9 +1,46 @@
+// "use client"
 import Circles from "../../components/Circles"
 import { motion } from "framer-motion"
 import { BsArrowRight } from "react-icons/bs"
 import { fadeIn } from "../../variants"
+import { useEffect, useState } from "react"
 
 const Contact = () => {
+    const [data, setData] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+    })
+    useEffect(() => {
+        console.log("DATA", data)
+    }, [data])
+    const handleChange = ({ target }) => {
+        console.log("target", target)
+        setData((prev) => ({ ...prev, [target.name]: target.value }))
+    }
+    const sendContactFrom = async () => {
+        const response = await fetch("/api/contact", {
+            method: "POST",
+            body: {
+                name: "kostya",
+                email: "kostyakazmirukk@gmil.com",
+                subject: "new work",
+                message: "message",
+            },
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+        })
+        if (response.status === 200) {
+            setData({})
+        }
+    }
+
+    // const onSubmit = async () => {
+    //     sendContactFrom()
+    // }
     return (
         <div className="h-full bg-primary/30">
             <div className="container mx-auto flex h-full items-center justify-center py-32 text-center xl:text-left">
@@ -34,27 +71,37 @@ const Contact = () => {
                                 type="text"
                                 placeholder="name"
                                 className="input"
+                                name="name"
+                                onChange={handleChange}
                             />
                             <input
                                 type="text"
                                 placeholder="email"
                                 className="input"
+                                name="email"
+                                onChange={handleChange}
                             />
                         </div>
                         <input
                             type="text"
                             placeholder="subject"
                             className="input"
+                            name="subject"
+                            onChange={handleChange}
                         />
                         <textarea
-                            name=""
+                            name="message"
                             id=""
                             cols="30"
                             rows="10"
                             placeholder="message"
                             className="textarea"
+                            onChange={handleChange}
                         ></textarea>
-                        <button className="btn group flex max-w-[170px] items-center justify-center overflow-hidden rounded-full border border-white/50 px-8 transition-all duration-300 hover:border-accent">
+                        <button
+                            onSubmit={sendContactFrom}
+                            className="btn group flex max-w-[170px] items-center justify-center overflow-hidden rounded-full border border-white/50 px-8 transition-all duration-300 hover:border-accent"
+                        >
                             <span className="transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0">
                                 Let's talk
                             </span>
