@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { BsArrowRight } from "react-icons/bs"
 import { fadeIn } from "../../variants"
 import { useEffect, useState } from "react"
+import toast from "react-hot-toast"
 
 const Contact = () => {
     const [data, setData] = useState({
@@ -20,11 +21,11 @@ const Contact = () => {
         setData((prev) => ({ ...prev, [target.name]: target.value }))
     }
     const sendContactFrom = async () => {
-        const response = await fetch("/api/contact", {
+        const response = await fetch("/api/contact2", {
             method: "POST",
             body: {
                 name: "kostya",
-                email: "kostyakazmirukk@gmil.com",
+                email: "kostyakazmirukk@gmail.com",
                 subject: "new work",
                 message: "message",
             },
@@ -36,6 +37,7 @@ const Contact = () => {
         if (response.status === 200) {
             setData({})
         }
+        toast.success(`Hey ${data.name}, your message was sent successfully`)
     }
 
     // const onSubmit = async () => {
