@@ -13,14 +13,14 @@ type RequestData = {
 export default async (req: NextApiRequest, res: NextApiResponse) => {
     const data = JSON.stringify(req.body)
     const { name, email, subject, message }: any = data
-    console.log("req", data)
+    console.log("req", req.body())
     // res.status(200).json({ message: "John Doe" })
     try {
         const emailSend = await resend.emails.send({
-            from: "kostyakazmiruk@gmail.com",
-            to: ["supermen3003@gmail.com"],
-            subject: subject,
-            react: EmailTemplate({ name: message }),
+            from: "kostyakazmiruk@kostyakazmiruk.com",
+            to: ["kostyakazmiruk@gmail.com"],
+            subject: "this is subject",
+            react: EmailTemplate({ name: "mesmy messgaesage" }),
         })
         console.log("me")
 

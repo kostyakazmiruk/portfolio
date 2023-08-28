@@ -17,11 +17,12 @@ const Contact = () => {
         console.log("DATA", data)
     }, [data])
     const handleChange = ({ target }) => {
-        console.log("target", target)
+        // console.log("target", target)
+
         setData((prev) => ({ ...prev, [target.name]: target.value }))
     }
-    const sendContactFrom = async () => {
-        const response = await fetch("/api/contact2", {
+    const sendContactFrom = () => {
+        const response = fetch("/api/contact2", {
             method: "POST",
             body: {
                 name: "kostya",
@@ -34,6 +35,8 @@ const Contact = () => {
                 Accept: "application/json",
             },
         })
+        console.log("DATA SEND", data)
+        console.log("response", response)
         if (response.status === 200) {
             setData({})
         }
@@ -101,7 +104,7 @@ const Contact = () => {
                             onChange={handleChange}
                         ></textarea>
                         <button
-                            onSubmit={sendContactFrom}
+                            onClick={sendContactFrom}
                             className="btn group flex max-w-[170px] items-center justify-center overflow-hidden rounded-full border border-white/50 px-8 transition-all duration-300 hover:border-accent"
                         >
                             <span className="transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0">
